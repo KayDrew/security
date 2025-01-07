@@ -1,12 +1,12 @@
 const express= require ("express");
 const helmet= require ("helmet");
-const Permissions-Policy = require("permissions-policy");
+const permissionsPolicy = require ("permissions-policy");
 const app= express();
 
 app.use(helmet());
 app.use((req,res,next)=>{
 res.setHeader(
-    "Permissions-Policy",
+    "permissionsPolicy",
     'geolocation=(self), microphone=(), camera(), notifications(self)'
   );
   next();
