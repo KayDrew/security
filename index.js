@@ -7,7 +7,7 @@ app.use(helmet());
 app.use((req,res,next)=>{
 res.setHeader(
     "permissionsPolicy",
-    'geolocation=(self), microphone=(), camera(), notifications(self)'
+    'geolocation=(self), microphone=(), camera=(), notifications=(self)'
   );
   next();
 
